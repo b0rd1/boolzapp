@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #4B4B4B;
 }
 
 .fl_l {
@@ -163,18 +164,17 @@
 
 /* chat */
 
-
 .chat {
-  padding-top: 5px;
-  height: 70px;
   width: 100%;
   background: #fff;
   cursor: pointer;
   position: relative;
 }
 
-.invisible{
-display: none;
+.chat img {
+  margin: 10px 20px 0 15px;
+  width: 50px;
+  height: 50px;
 }
 
 .chat:hover {
@@ -182,7 +182,7 @@ display: none;
 }
 
 .chat:nth-child(2) {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .data_messaggio {
@@ -192,12 +192,8 @@ display: none;
   margin-right: 15px;
 }
 
-.chat img{
-  margin-right: 20px;
-}
-
 .nome_utente {
-  margin: 10px 0 0 0px;
+  padding-top: 15px;
   padding-left: 20px;
   line-height: 20px;
   font-weight: 500;
@@ -250,21 +246,21 @@ display: none;
   opacity: 0.5;
   display: inline-block;
   position: relative;
-  left: 30px;
-  top: 10px;
+  left: 35px;
+  top: 5px;
 }
 
-.delete_row{
+.delete_row {
   color: grey;
-  font-size: 35px;
+  font-size: 20px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 15px;
   z-index: 100;
   cursor: pointer;
 }
 
-.delete_menu{
+.delete_menu {
   background: #fff;
   border-radius: 0 8px 8px 8px;
   box-shadow: 1px 1px 1px 1px lightgrey;
@@ -278,7 +274,7 @@ display: none;
   left: -10px;
 }
 
-.delete_menu:hover, .delete_menu_user:hover{
+.delete_menu:hover, .delete_menu_user:hover {
   background: #FBFBFB;
 }
 
@@ -296,16 +292,16 @@ display: none;
   word-wrap: break-word;
 }
 
-.delete_row_user{
+.delete_row_user {
   color: grey;
-  font-size: 35px;
+  font-size: 20px;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 15px;
   cursor: pointer;
 }
 
-.delete_menu_user{
+.delete_menu_user {
   background: #fff;
   margin-left: 80px;
   border-radius: 0 8px 8px 8px;
@@ -371,12 +367,74 @@ display: none;
   display: none;
 }
 
+/* menu modale */
+
+.menu_modale {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
+.menu_modale_interno {
+  width: 370px;
+  height: 170px;
+  background: white;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 10px 10px 50px grey;
+}
+
+.menu_modale_main {
+  padding: 25px 0 0 25px;
+  height: 100px;
+  font-size: 20px;
+}
+
+.menu_modale_footer {
+  text-align: right;
+  padding: 5px 25px 0 0;
+}
+
+.menu_modale_footer button {
+  padding: 12px 20px;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+}
+
+#btn-elimina {
+  background: #0CB757;
+  color: white;
+}
+
+#btn-chiudi {
+  background: white;
+  color: #0CB757;
+}
+
+#btn-elimina:hover {
+  box-shadow: 2px 2px 10px grey;
+  transition: .2s;
+}
+
+#btn-chiudi:hover {
+  box-shadow: 2px 2px 10px grey;
+  transition: .2s;
+}
+
 /* classi da attivare */
 
 .chat.active {
   background: #E9EBEB;
 }
 
-.delete_message.active{
+.delete_message.active {
   display: inline-block;
+}
+
+.menu_modale.active {
+  display: flex;
 }

@@ -1,4 +1,4 @@
-$('document').ready(function() {
+$(document).ready(function() {
 
   // seleziona chat sulla sinistra
   $('.chat').click(function() {
@@ -41,7 +41,6 @@ $('document').ready(function() {
     }
   });
 
-
   // chiude menu delete
   $(document).mouseup(function(e) {
     if ((!$('.delete_menu').is(e.target) && $('.delete_menu').has(e.target).length === 0) || (!$('.delete_menu_user').is(e.target) && $('.delete_menu_user').has(e.target).length === 0)) {
@@ -50,7 +49,7 @@ $('document').ready(function() {
     }
   });
 
-  // cancella messaggio contatto
+  // cancella messaggio CONTATTO
   $(document).on("mouseenter", ".message_contact", function() {
 
     //aggiunge classe freccia giu
@@ -69,15 +68,23 @@ $('document').ready(function() {
       // aggiunge menu cancella messaggio
       $(this).prev().append('<div class="delete_menu">Cancella il messaggio</div>').css('opacity', '1');
 
-      // elimina il messaggio cliccato
+      // apre menu modale
       $('.delete_menu').click(function() {
-        $(this).closest('.message_contact').remove()
+          $('.menu_modale').addClass('active');
+      });
+
+      $('#btn-elimina').click(function() {
+        $('.message_contact').remove();
+        $('.menu_modale').removeClass('active');
+      });
+
+      $('#btn-chiudi').click(function() {
+        $('.menu_modale').removeClass('active');
       });
     });
   });
 
-
-  // cancella messaggio utente
+  // cancella messaggio UTENTE
   $(document).on("mouseenter", ".message_user", function() {
 
     //aggiunge classe freccia giu
@@ -95,13 +102,21 @@ $('document').ready(function() {
       // aggiunge menu cancella messaggio
       $(this).parent().append('<div class="delete_menu_user">Cancella il messaggio</div>');
 
-      // elimina il messaggio cliccato
+      // apre menu modale
       $('.delete_menu_user').click(function() {
-        $(this).parent().remove()
+          $('.menu_modale').addClass('active');
+      });
+
+      $('#btn-elimina').click(function() {
+        $('.message_user').remove();
+        $('.menu_modale').removeClass('active');
+      });
+
+      $('#btn-chiudi').click(function() {
+        $('.menu_modale').removeClass('active');
       });
     });
   });
-
 
   //ricerca nome
   $('#search_bar').on("keyup", function() {
@@ -109,15 +124,11 @@ $('document').ready(function() {
     // nome che stiamo cercando in minuscolo
     var nomeCercato = $(this).val().toLowerCase();
 
-    //crea un nuovo array con le regole della funzione
-    $(".nome_utente").filter(function() {
+    //cicla i nomi degli utenti
+    $(".nome_utente").each(function() {
 
       //nome contatto in lista in minuscolo
       var nomeContatto = $(this).text().toLowerCase();
-
-      // se la posizione della lettera cercata è superriore a -1 non non far nulla.
-      // -1 è restituito da indexOf che non trova nulla
-      // $(this).toggle(nomeContatto.indexOf(nomeCercato) > -1)
 
       if ((nomeContatto.includes(nomeCercato))) {
         $(this).parent().children().show();
@@ -131,7 +142,25 @@ $('document').ready(function() {
   });
 
 
-
+  // // new chat
+  // $('.chat').click(function() {
+  //   console.log($('.message_contact').length >= 1);
+  //
+  //
+  //
+  //   //clona la finestra
+  //   if ($('.message_contact').length >= 1) {
+  //     // $('.main_right').clone().append('.main_right')
+  //     $('.main_right').add('.main_right')
+  //   }else {
+  //     $('.main_right').empty()
+  //   }
+  //
+  //
+  //   // $('.main_right').clone().append('.main_right')
+  //
+  //
+  // });
 
 
 
