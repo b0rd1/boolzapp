@@ -156,7 +156,7 @@ $(document).ready(function() {
     $('.chat').removeClass('active');
     $('.home').css('display', 'none');
     $('.main_right_footer').css('display', 'flex');
-    $('.header_right').css('display', 'block');
+    $('.header_right').css('display', 'flex');
     $(this).addClass('active');
 
     //nome contatto ed immagine in lista
