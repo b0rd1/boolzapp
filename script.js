@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-  // seleziona chat sulla sinistra
-  $('.chat').click(function() {
-    $('.chat').removeClass('active');
-    $(this).addClass('active');
-  });
-
   // fa comparire paper-plane
   $('#textarea').click(function(e) {
     $('.fa-microphone').hide();
@@ -20,25 +14,41 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
-  // scrive messaggio utente
-  $('#textarea').keypress(function(e) {
+  // scrive messaggio
+  $('#textarea').keyup(function(e) {
 
     if (e.which == 13) {
+
+      var nomeContatto = $('.chat.active');
+      var index = $(nomeContatto).index();
+      var mainRightActive = $('.main_right')[index - 1];
 
       var d = new Date();
       var testoInserito = $('#textarea').val();
 
-      if (testoInserito != 0) {
+      $('#message_user_to_clone .message_user .testo_user').text(testoInserito);
+      $('#message_user_to_clone .message_user .time_user').text(d.getHours() + ':' + d.getMinutes());
+      $('#message_contact_to_clone .message_contact .testo_contact').text('Ok');
+      $('#message_contact_to_clone .message_contact .time_contact').text(d.getHours() + ':' + d.getMinutes());
 
-        $('.main_right').append('<div class="message_user fl_r">' + testoInserito + '<div class="time_user">' + d.getHours() + ':' + d.getMinutes() + '</div></div><div class="clear"></div>');
+      var messaggioUtente = $('#message_user_to_clone').clone();
+      var contenutoContainerUtente = $(messaggioUtente).html();
+
+      var messaggioContatto = $('#message_contact_to_clone').clone();
+      var contenutoContainerContatto = $(messaggioContatto).html();
+
+      if (testoInserito.length > 0) {
+        $(mainRightActive).append(contenutoContainerUtente);
+        $('.message_user').addClass('active');
         $('#textarea').val('');
 
         //scrive messaggio contatto dopo un secondo
         setTimeout(function() {
-          $('.main_right').append('<div class="message_contact fl_l">Ok<div class="time_contact">' + d.getHours() + ':' + d.getMinutes() + '</div></div><div class="clear"></div>')
+          $(mainRightActive).append(contenutoContainerContatto)
+          $('.message_contact').addClass('active');
         }, 1000);
-      }
-    }
+      };
+    };
   });
 
   // chiude menu delete
@@ -50,16 +60,14 @@ $(document).ready(function() {
   });
 
   // cancella messaggio CONTATTO
-  $(document).on("mouseenter", ".message_contact", function() {
+  $(document).on("mouseenter", ".message_contact", function(e) {
 
     //aggiunge classe freccia giu
     $(this).append('<i class="fas fa-angle-down delete_row"></i>');
 
-
     //evento quando il mouse esce dal messaggio
-    $('.message_contact').mouseleave(function(e) {
+    $('.message_contact').mouseleave(function() {
       $('.delete_row').remove();
-      e.stopPropagation()
     });
 
     //click sulla freccia
@@ -70,14 +78,16 @@ $(document).ready(function() {
 
       // apre menu modale
       $('.delete_menu').click(function() {
-          $('.menu_modale').addClass('active');
+        $('.menu_modale').addClass('active');
       });
 
+      // elimina messaggio
       $('#btn-elimina').click(function() {
-        $('.message_contact').remove();
+        $(e.target).remove()
         $('.menu_modale').removeClass('active');
       });
 
+      // chiude menu modale
       $('#btn-chiudi').click(function() {
         $('.menu_modale').removeClass('active');
       });
@@ -85,7 +95,7 @@ $(document).ready(function() {
   });
 
   // cancella messaggio UTENTE
-  $(document).on("mouseenter", ".message_user", function() {
+  $(document).on("mouseenter", ".message_user", function(e) {
 
     //aggiunge classe freccia giu
     $(this).append('<i class="fas fa-angle-down delete_row_user"></i>');
@@ -104,11 +114,11 @@ $(document).ready(function() {
 
       // apre menu modale
       $('.delete_menu_user').click(function() {
-          $('.menu_modale').addClass('active');
+        $('.menu_modale').addClass('active');
       });
 
       $('#btn-elimina').click(function() {
-        $('.message_user').remove();
+        $(e.target).remove()
         $('.menu_modale').removeClass('active');
       });
 
@@ -134,33 +144,40 @@ $(document).ready(function() {
         $(this).parent().children().show();
       } else {
         $(this).parent().children().hide();
-
       }
-
     });
+  });
+
+
+  // seleziona chat
+  $('.chat').click(function() {
+
+    // evidenzia chat selezionata
+    $('.chat').removeClass('active');
+    $('.home').css('display', 'none');
+    $('.main_right_footer').css('display', 'flex');
+    $('.header_right').css('display', 'block');
+    $(this).addClass('active');
+
+    //nome contatto ed immagine in lista
+    var nomeContatto = $(this).children().closest('.nome_utente').text();
+    var iconaContatto = $(this).children().closest('.avatar').attr('src');
+
+    //cambia nome contatto attivo
+    $('.header_right span').text(nomeContatto);
+    $('.header_right img').attr('src', iconaContatto);
+
+    var index = $(this).index();
+    var mainRightActive = $('.main_right')[index - 1];
+
+    $('.main_right').removeClass('active');
+    $(mainRightActive).addClass('active');
 
   });
 
 
-  // // new chat
-  // $('.chat').click(function() {
-  //   console.log($('.message_contact').length >= 1);
-  //
-  //
-  //
-  //   //clona la finestra
-  //   if ($('.message_contact').length >= 1) {
-  //     // $('.main_right').clone().append('.main_right')
-  //     $('.main_right').add('.main_right')
-  //   }else {
-  //     $('.main_right').empty()
-  //   }
-  //
-  //
-  //   // $('.main_right').clone().append('.main_right')
-  //
-  //
-  // });
+
+
 
 
 

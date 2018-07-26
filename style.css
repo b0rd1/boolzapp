@@ -48,7 +48,7 @@
   max-width: 1400px;
   width: 1400px;
   max-height: 100vh;
-  height: 100vh;
+  height: 1300px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -56,12 +56,62 @@
   padding-top: 20px;
 }
 
+/* home */
+
+.home {
+  width: 70%;
+  height: 97%;
+  background: #F7F9FA;
+  border-radius: 0 5px 0 0;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home img{
+  margin: 150px 0 50px;
+}
+
+.home-header{
+  font-size: 35px;
+  color: #4B4B4B;
+  opacity: 0.9;
+  font-weight: lighter;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+.home-main{
+  opacity: 0.6;
+  font-size: 15px;
+  line-height: 20px;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 35px;
+}
+
+.home-footer{
+  opacity: 0.6;
+  font-size: 15px;
+  line-height: 20px;
+  padding-bottom: 120px;
+}
+
+.home-footer a{
+  color:green;
+  text-decoration: none;
+  font-weight: 500;
+}
+
 /* header */
 
 .header_left, .header_right {
   box-shadow: 1px 1px 2px 1px grey;
   width: 100%;
-  height: 60px;
+  height: 6%;
   background: #EEEEEE;
 }
 
@@ -75,6 +125,7 @@
   border-radius: 0 5px 0 0;
   width: 70%;
   border-bottom: 1px solid lightgrey;
+  display: none;
 }
 
 .header_left i, .header_right i {
@@ -223,13 +274,13 @@
   height: 85%;
   width: 70%;
   background-image: url(background.jpg);
-  border-radius: 0 0 5px 0;
-  box-shadow: 0.5px 0.5px 0.5px #989B9D;
+  box-shadow: 0.2px 0.2px 0.5px #989B9D;
+  display: none;
 }
 
 /* contact */
 
-.message_contact {
+.message_contact, #message_contact_to_clone {
   margin-top: 15px;
   background: #fff;
   margin-left: 100px;
@@ -239,6 +290,7 @@
   position: relative;
   max-width: 700px;
   word-wrap: break-word;
+  display: none;
 }
 
 .time_contact {
@@ -280,7 +332,7 @@
 
 /* user */
 
-.message_user {
+.message_user, #message_user_to_clone {
   margin-top: 15px;
   background: #DCF8C6;
   margin-right: 100px;
@@ -289,6 +341,7 @@
   box-shadow: 1px 1px 1px 1px lightgrey;
   position: relative;
   max-width: 700px;
+  display: none;
   word-wrap: break-word;
 }
 
@@ -332,10 +385,10 @@
   background: #F5F1EE;
   height: 6%;
   width: 70%;
-  display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0.5px 0.5px 0.5px #989B9D;
+  display: none;
 }
 
 .main_right_footer i {
@@ -376,6 +429,7 @@
   position: fixed;
   top: 0;
   display: none;
+  font-family: 'Hind', sans-serif;
 }
 
 .menu_modale_interno {
@@ -432,6 +486,10 @@
 }
 
 .delete_message.active {
+  display: inline-block;
+}
+
+.message_user.active, .message_contact.active, .main_right.active {
   display: inline-block;
 }
 

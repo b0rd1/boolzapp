@@ -23,12 +23,31 @@
       <i class="fas fa-comment-alt"></i>
       <i class="fas fa-circle-notch"></i>
     </div>
+
     <div class="header_right fl_r">
       <img src="uomo2.png" class="avatar">
       <span>Marco Rossi</span>
       <i class="fas fa-ellipsis-v"></i>
       <i class="fas fa-paperclip"></i>
       <i class="fas fa-search"></i>
+    </div>
+
+    <!-- homepage -->
+    <div class="home fl_r">
+      <img src="home.png">
+      <div class="home-header">
+        Mantieni il telefono <br>
+        connesso
+      </div>
+      <div class="home-main">
+        WhatsApp si collega al tuo telefono per sincronizzare  i messaggi. <br>
+        Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.
+      </div>
+      <br>
+      <div class="home-footer">
+        <i class="fas fa-laptop"></i>
+        WhatsApp è disponibile per Windows. <a href="#">Scaricala qui.</a>
+      </div>
     </div>
 
     <!-- main left -->
@@ -105,22 +124,14 @@
     </div>
 
     <!-- main right -->
-    <div class="main_right fl_r">
-      <div class="message_contact fl_l">Ti devo dire una cosa al più presto
-        <div class="time_contact">
-          9:52
-        </div>
-      </div>
-      <div class="clear"></div>
-      <div class="message_user fl_r">Dimmi pure
-        <div class="time_user">10:52</div>
-      </div>
-      <div class="clear"></div>
-    </div>
+    <div class="main_right fl_r"></div>
+    <div class="main_right fl_r"></div>
+    <div class="main_right fl_r"></div>
+    <div class="main_right fl_r"></div>
+    <div class="main_right fl_r"></div>
 
     <!-- main footer -->
     <div class="main_right_footer fl_r">
-
       <i class="far fa-grin-alt"></i>
       <input id="textarea" type="text" placeholder="Scrivi un messaggio">
       <i class="fas fa-microphone"></i>
@@ -129,7 +140,7 @@
   </div>
   <div class="background_body"></div>
 
-  <!-- menu modale  -->
+  <!-- menu modale invisibile di default -->
   <div class="menu_modale">
     <div class="menu_modale_interno">
       <div class="menu_modale_main">
@@ -140,6 +151,23 @@
         <button type="button" name="button" class="" id="btn-elimina">ELIMINA PER ME</button>
       </div>
     </div>
+  </div>
+
+  <!-- codice contatto da copiare -->
+  <div id="message_contact_to_clone">
+    <div class="message_contact fl_l">
+      <span class="testo_contact"></span>
+      <div class="time_contact"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!-- codice utente da copiare -->
+  <div id="message_user_to_clone">
+    <div class="message_user fl_r">
+      <span class="testo_user"></span>
+      <div class="time_user"></div>
+    </div>
+    <div class="clear"></div>
   </div>
 
   <script src="script.js"></script>
