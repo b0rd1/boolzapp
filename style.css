@@ -70,6 +70,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 0.5px 0.5px 0.5px  grey;
+
 }
 
 .home img{
@@ -109,7 +111,7 @@
 /* header */
 
 .header_left, .header_right {
-  box-shadow: 1px 1px 2px 1px grey;
+  box-shadow: 0.5px 0.5px 0.5px grey;
   width: 100%;
   height: 6%;
   background: #EEEEEE;
@@ -118,13 +120,11 @@
 .header_left {
   border-radius: 5px 0 0 0;
   width: 30%;
-  border-right: 1px solid lightgrey;
 }
 
 .header_right {
   border-radius: 0 5px 0 0;
   width: 70%;
-  border-bottom: 1px solid lightgrey;
   display: none;
 }
 
@@ -152,7 +152,7 @@
   height: 91%;
   width: 30%;
   border-radius: 0 0 0 5px;
-  box-shadow: 0 1px 1px -5px grey, 0 0.5px 0.5px 0.5px #989B9D;
+  box-shadow: 0.5px 0.5px 0.5px grey;
 }
 
 ::-webkit-scrollbar {
@@ -178,6 +178,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 0.5px solid lightgrey;
+  border-bottom: 0.5px solid lightgrey;
 }
 
 .main_left_search i {
@@ -273,7 +275,7 @@
   position: relative;
   height: 85%;
   width: 70%;
-  background-image: url(background.jpg);
+  background-image: url(img/background.jpg);
   box-shadow: 0.2px 0.2px 0.5px #989B9D;
   display: none;
 }
