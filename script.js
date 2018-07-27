@@ -1,5 +1,45 @@
 $(document).ready(function() {
 
+  // apre e chiude sub menu
+  $('.fa-ellipsis-v.right').click(function() {
+    if ($(".info-contatto").is(":hidden")) {
+      $(".info-contatto").show("slide");
+    } else {
+      $(".info-contatto").hide('slide');
+    }
+  });
+  $('.fa-ellipsis-v.left').click(function() {
+    if ($(".info-profilo").is(":hidden")) {
+      $(".info-profilo").show("slide");
+    } else {
+      $(".info-profilo").hide('slide');
+    }
+  });
+  $('.fa-paperclip').click(function() {
+    if ($(".allegati").is(":hidden")) {
+      $(".allegati").slideDown();
+    } else {
+      $(".allegati").slideUp();
+    }
+  });
+
+  // chiude menu delete
+  $(document).mouseup(function(e) {
+    if ((!$('.delete_menu').is(e.target) && $('.delete_menu').has(e.target).length === 0) ||
+      (!$('.delete_menu_user').is(e.target) && $('.delete_menu_user').has(e.target).length === 0) ||
+      (!$('.info-contatto').is(e.target) && $('.info-contatto').has(e.target).length === 0) ||
+      (!$('.info-profilo').is(e.target) && $('.info-profilo').has(e.target).length === 0) ||
+      (!$('.allegati').is(e.target) && $('.allegati').has(e.target).length === 0)) {
+      $('.delete_menu').hide();
+      $('.delete_menu_user').hide();
+      $('.info-profilo').hide('slide');
+      $('.info-contatto').hide('slide');
+      $('.allegati').slideUp();
+    }
+  });
+
+
+
   // fa comparire paper-plane
   $('#textarea').click(function(e) {
     $('.fa-microphone').hide();
@@ -49,14 +89,6 @@ $(document).ready(function() {
         }, 1000);
       };
     };
-  });
-
-  // chiude menu delete
-  $(document).mouseup(function(e) {
-    if ((!$('.delete_menu').is(e.target) && $('.delete_menu').has(e.target).length === 0) || (!$('.delete_menu_user').is(e.target) && $('.delete_menu_user').has(e.target).length === 0)) {
-      $('.delete_menu').hide();
-      $('.delete_menu_user').hide();
-    }
   });
 
   // cancella messaggio CONTATTO
