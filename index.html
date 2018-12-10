@@ -1,328 +1,339 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="https://web.whatsapp.com/favicon-64x64.ico">
-  <title>WhatsApp</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://web.whatsapp.com/favicon-64x64.ico">
+    <title>WhatsApp Replica</title>
+  </head>
 
-<body>
-  <div class="background_head"></div>
-  <div class="container">
+  <body>
+    <div class="background_head"></div>
+    <div class="container">
 
-    <!-- header -->
-    <div class="header_left fl_l">
-      <img src="img/my_picture.png" class="avatar">
-      <div>
-        <i class="fas fa-circle-notch"></i>
-        <i class="fas fa-comment-alt"></i>
-        <i class="fas fa-ellipsis-v left"></i>
+      <!-- header -->
+      <div class="header_left fl_l">
+        <img src="img/my_picture.png" class="avatar">
+        <div>
+          <i class="fas fa-circle-notch"></i>
+          <i class="fas fa-comment-alt"></i>
+          <i class="fas fa-ellipsis-v left"></i>
+        </div>
+        <div class="info-profilo">
+          <div>Nuovo gruppo</div>
+          <div>Profilo</div>
+          <div>Archiviate</div>
+          <div>Importanti</div>
+          <div>Impostazioni</div>
+          <div>Disconnetti</div>
+        </div>
       </div>
-      <div class="info-profilo">
-        <div>Nuovo gruppo</div>
-        <div>Profilo</div>
-        <div>Archiviate</div>
-        <div>Importanti</div>
-        <div>Impostazioni</div>
-        <div>Disconnetti</div>
+
+      <div class="header_right fl_r">
+        <div>
+          <img src="img/uomo2.png" class="avatar">
+          <span>Marco Rossi</span>
+        </div>
+        <div>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v right"></i>
+        </div>
+        <div class="info-contatto">
+          <div>Info contatto</div>
+          <div>Seleziona messaggi</div>
+          <div>Silenzioso</div>
+          <div>Cancella messaggi</div>
+          <div>Elimina chat</div>
+        </div>
+        <div class="allegati">
+          <i class="fas fa-image"></i>
+          <i class="fas fa-camera"></i>
+          <i class="fas fa-file"></i>
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+
+      <!-- homepage -->
+      <div class="home fl_r">
+        <img src="img/home.png">
+        <div class="home-header">
+          Mantieni il telefono
+          <br>
+          connesso
+        </div>
+        <div class="home-main">
+          WhatsApp si collega al tuo telefono per sincronizzare i messaggi.
+          <br>
+          Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.
+        </div>
+        <br>
+        <div class="home-footer">
+          <i class="fas fa-laptop"></i>
+          WhatsApp è disponibile per Windows.
+          <a href="https://www.whatsapp.com/download/">Scaricala qui.</a>
+        </div>
+      </div>
+
+      <!-- main left -->
+      <div class="main_left fl_l">
+        <div class="main_left_search">
+          <i class="fas fa-search"></i>
+          <input id="search_bar" class="main_left_search" type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
+        <div class="chat">
+          <img src="img/uomo2.png" class="avatar">
+          <div class="chat_border"></div>
+          <div class="nome_utente">
+            Marco Rossi
+          </div>
+          <div class="preview_messaggio">
+            Ti devo dire una cosa al più presto
+            <div class="data_messaggio fl_r">
+              Ieri
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <img src="img/uomo3.png" class="avatar">
+          <div class="chat_border"></div>
+          <div class="nome_utente">
+            Fabio
+          </div>
+          <div class="preview_messaggio">
+            Ti devo raccontare del lavoro nuovo che...
+            <div class="data_messaggio fl_r">
+              Mercoledì
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <img src="img/donna5.png" class="avatar">
+          <div class="chat_border"></div>
+          <div class="nome_utente">
+            Giorgia
+          </div>
+          <div class="preview_messaggio">
+            Mi sei mancato tanto!!
+            <div class="data_messaggio fl_r">
+              Domenica
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/donna2.png" class="avatar">
+          <div class="nome_utente">
+            Lucia Rossi
+          </div>
+          <div class="preview_messaggio">
+            Ti è piaciuta la sorpresa?
+            <div class="data_messaggio fl_r">
+              20/7/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo1.png" class="avatar">
+          <div class="nome_utente">
+            Luca Bianchi
+          </div>
+          <div class="preview_messaggio">
+            Ciao ci sentiamo per domani!
+            <div class="data_messaggio fl_r">
+              9/7/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo4.png" class="avatar">
+          <div class="nome_utente">
+            Bruno
+          </div>
+          <div class="preview_messaggio">
+            Chiamami appena leggi il messaggio, non...
+            <div class="data_messaggio fl_r">
+              28/6/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo6.png" class="avatar">
+          <div class="nome_utente">
+            Marco Grassi
+          </div>
+          <div class="preview_messaggio">
+            Ehy!
+            <div class="data_messaggio fl_r">
+              15/6/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo8.png" class="avatar">
+          <div class="nome_utente">
+            Franco Negro
+          </div>
+          <div class="preview_messaggio">
+            Ti devo mandare quelle foto che mi hai...
+            <div class="data_messaggio fl_r">
+              25/5/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo7.png" class="avatar">
+          <div class="nome_utente">
+            Zio
+          </div>
+          <div class="preview_messaggio">
+            Passo da casa un attimo se ci sei
+            <div class="data_messaggio fl_r">
+              20/5/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/donna6.png" class="avatar">
+          <div class="nome_utente">
+            Michela
+          </div>
+          <div class="preview_messaggio">
+            Hey, come va il lavoro?
+            <div class="data_messaggio fl_r">
+              9/2/2018
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/donna7.png" class="avatar">
+          <div class="nome_utente">
+            Mamma
+          </div>
+          <div class="preview_messaggio">
+            Auguri di buona natale!!
+            <div class="data_messaggio fl_r">
+              25/12/2017
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/uomo5.png" class="avatar">
+          <div class="nome_utente">
+            Gianni
+          </div>
+          <div class="preview_messaggio">
+            Ciaoooo tutto ok?
+            <div class="data_messaggio fl_r">
+              11/11/2017
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat_border"></div>
+          <img src="img/donna3.png" class="avatar">
+          <div class="nome_utente">
+            Maria
+          </div>
+          <div class="preview_messaggio">
+            Non ti sei più fatto sentire! :(
+            <div class="data_messaggio fl_r">
+              12/7/2017
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main right -->
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+      <div class="main_right fl_r"></div>
+
+      <!-- main footer -->
+      <div class="main_right_footer fl_r">
+        <i class="far fa-grin-alt"></i>
+        <input id="textarea" type="text" placeholder="Scrivi un messaggio">
+        <i class="fas fa-microphone"></i>
+        <i class="fas fa-paper-plane"></i>
+      </div>
+    </div>
+    <div class="background_body"></div>
+
+    <!-- menu modale invisibile di default -->
+    <div class="menu_modale">
+      <div class="menu_modale_interno">
+        <div class="menu_modale_main">
+          <p>Eliminare messaggio?</p>
+        </div>
+        <div class="menu_modale_footer">
+          <button type="button" name="button" class="" id="btn-chiudi">ANNULLA</button>
+          <button type="button" name="button" class="" id="btn-elimina">ELIMINA PER ME</button>
+        </div>
       </div>
     </div>
 
-    <div class="header_right fl_r">
-      <div>
-        <img src="uomo2.png" class="avatar">
-        <span>Marco Rossi</span>
+    <!-- codice contatto da copiare -->
+    <div id="message_contact_to_clone">
+      <div class="message_contact fl_l">
+        <span class="testo_contact"></span>
+        <div class="time_contact"></div>
       </div>
-      <div>
-        <i class="fas fa-search"></i>
-        <i class="fas fa-paperclip"></i>
-        <i class="fas fa-ellipsis-v right"></i>
+      <div class="clear"></div>
+    </div>
+    <!-- codice utente da copiare -->
+    <div id="message_user_to_clone">
+      <div class="message_user fl_r">
+        <span class="testo_user"></span>
+        <div class="time_user"></div>
       </div>
-      <div class="info-contatto">
-        <div>Info contatto</div>
-        <div>Seleziona messaggi</div>
-        <div>Silenzioso</div>
-        <div>Cancella messaggi</div>
-        <div>Elimina chat</div>
-      </div>
-      <div class="allegati">
-        <i class="fas fa-image"></i>
-        <i class="fas fa-camera"></i>
-        <i class="fas fa-file"></i>
-        <i class="fas fa-user"></i>
-      </div>
+      <div class="clear"></div>
     </div>
 
-    <!-- homepage -->
-    <div class="home fl_r">
+    <!-- home attiva a 700px -->
+    <div class="home2">
       <img src="img/home.png">
-      <div class="home-header">
-        Mantieni il telefono <br> connesso
+      <div class="warning">
+        Schermo troppo piccolo
+        <br>
+        scarica l'app.
       </div>
-      <div class="home-main">
-        WhatsApp si collega al tuo telefono per sincronizzare i messaggi. <br> Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.
+      <div class="home-main2">
+        WhatsApp si collega al tuo telefono per sincronizzare i messaggi.
+        <br>
+        Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.
       </div>
       <br>
-      <div class="home-footer">
-        <i class="fas fa-laptop"></i> WhatsApp è disponibile per Windows. <a href="https://www.whatsapp.com/download/">Scaricala qui.</a>
+      <div class="home-footer2">
+        <i class="fas fa-laptop"></i>
+        WhatsApp è disponibile per Windows.
+        <a href="https://www.whatsapp.com/download/">Scaricala qui.</a>
       </div>
     </div>
 
-    <!-- main left -->
-    <div class="main_left fl_l">
-      <div class="main_left_search">
-        <i class="fas fa-search"></i>
-        <input id="search_bar" class="main_left_search" type="text" placeholder="Cerca o inizia una nuova chat">
-      </div>
-      <div class="chat">
-        <img src="img/uomo2.png" class="avatar">
-        <div class="chat_border"></div>
-        <div class="nome_utente">
-          Marco Rossi
-        </div>
-        <div class="preview_messaggio">
-          Ti devo dire una cosa al più presto
-          <div class="data_messaggio fl_r">
-            Ieri
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <img src="img/uomo3.png" class="avatar">
-        <div class="chat_border"></div>
-        <div class="nome_utente">
-          Fabio
-        </div>
-        <div class="preview_messaggio">
-          Ti devo raccontare del lavoro nuovo che...
-          <div class="data_messaggio fl_r">
-            Mercoledì
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <img src="img/donna5.png" class="avatar">
-        <div class="chat_border"></div>
-        <div class="nome_utente">
-          Giorgia
-        </div>
-        <div class="preview_messaggio">
-          Mi sei mancato tanto!!
-          <div class="data_messaggio fl_r">
-            Domenica
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/donna2.png" class="avatar">
-        <div class="nome_utente">
-          Lucia Rossi
-        </div>
-        <div class="preview_messaggio">
-          Ti è piaciuta la sorpresa?
-          <div class="data_messaggio fl_r">
-            20/7/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo1.png" class="avatar">
-        <div class="nome_utente">
-          Luca Bianchi
-        </div>
-        <div class="preview_messaggio">
-          Ciao ci sentiamo per domani!
-          <div class="data_messaggio fl_r">
-            9/7/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo4.png" class="avatar">
-        <div class="nome_utente">
-          Bruno
-        </div>
-        <div class="preview_messaggio">
-          Chiamami appena leggi il messaggio, non...
-          <div class="data_messaggio fl_r">
-            28/6/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo6.png" class="avatar">
-        <div class="nome_utente">
-          Marco Grassi
-        </div>
-        <div class="preview_messaggio">
-          Ehy!
-          <div class="data_messaggio fl_r">
-            15/6/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo8.png" class="avatar">
-        <div class="nome_utente">
-          Franco Negro
-        </div>
-        <div class="preview_messaggio">
-          Ti devo mandare quelle foto che mi hai...
-          <div class="data_messaggio fl_r">
-            25/5/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo7.png" class="avatar">
-        <div class="nome_utente">
-          Zio
-        </div>
-        <div class="preview_messaggio">
-          Passo da casa un attimo se ci sei
-          <div class="data_messaggio fl_r">
-            20/5/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/donna6.png" class="avatar">
-        <div class="nome_utente">
-          Michela
-        </div>
-        <div class="preview_messaggio">
-          Hey, come va il lavoro?
-          <div class="data_messaggio fl_r">
-            9/2/2018
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/donna7.png" class="avatar">
-        <div class="nome_utente">
-          Mamma
-        </div>
-        <div class="preview_messaggio">
-          Auguri di buona natale!!
-          <div class="data_messaggio fl_r">
-            25/12/2017
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/uomo5.png" class="avatar">
-        <div class="nome_utente">
-          Gianni
-        </div>
-        <div class="preview_messaggio">
-          Ciaoooo tutto ok?
-          <div class="data_messaggio fl_r">
-            11/11/2017
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <div class="chat_border"></div>
-        <img src="img/donna3.png" class="avatar">
-        <div class="nome_utente">
-          Maria
-        </div>
-        <div class="preview_messaggio">
-          Non ti sei più fatto sentire! :(
-          <div class="data_messaggio fl_r">
-            12/7/2017
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- main right -->
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-    <div class="main_right fl_r"></div>
-
-    <!-- main footer -->
-    <div class="main_right_footer fl_r">
-      <i class="far fa-grin-alt"></i>
-      <input id="textarea" type="text" placeholder="Scrivi un messaggio">
-      <i class="fas fa-microphone"></i>
-      <i class="fas fa-paper-plane"></i>
-    </div>
-  </div>
-  <div class="background_body"></div>
-
-  <!-- menu modale invisibile di default -->
-  <div class="menu_modale">
-    <div class="menu_modale_interno">
-      <div class="menu_modale_main">
-        <p>Eliminare messaggio?</p>
-      </div>
-      <div class="menu_modale_footer">
-        <button type="button" name="button" class="" id="btn-chiudi">ANNULLA</button>
-        <button type="button" name="button" class="" id="btn-elimina">ELIMINA PER ME</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- codice contatto da copiare -->
-  <div id="message_contact_to_clone">
-    <div class="message_contact fl_l">
-      <span class="testo_contact"></span>
-      <div class="time_contact"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
-  <!-- codice utente da copiare -->
-  <div id="message_user_to_clone">
-    <div class="message_user fl_r">
-      <span class="testo_user"></span>
-      <div class="time_user"></div>
-    </div>
-    <div class="clear"></div>
-  </div>
-
-
-  <!-- home attiva a 700px -->
-  <div class="home2">
-    <img src="img/home.png">
-    <div class="warning">
-      Schermo troppo piccolo <br> scarica l'app.
-    </div>
-    <div class="home-main2">
-      WhatsApp si collega al tuo telefono per sincronizzare i messaggi. <br> Per ridurre l'utilizzo dei dati, collega il telefono al Wi-Fi.
-    </div>
-    <br>
-    <div class="home-footer2">
-      <i class="fas fa-laptop"></i> WhatsApp è disponibile per Windows. <a href="https://www.whatsapp.com/download/">Scaricala qui.</a>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 
 </html>
